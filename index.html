@@ -1,197 +1,148 @@
+```html
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Budapest IX. Kerületi Molnár Ferenc Magyar-Angol Két Tanítási Nyelvű Általános Iskola</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f8ff;
-      color: #222;
-      line-height: 1.6;
-    }
+    <meta charset="UTF-8">
+    <title>Budapest IX. Kerületi Molnár Ferenc Magyar-Angol Két Tanítási Nyelvű Általános Iskola</title>
 
-    header {
-      background: #2f6fbd;
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-    }
+    <link rel="stylesheet" href="style.css">
 
-   .kepek {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-}
-
-.kep-kartya {
-  background: #eaf2ff;
-  padding: 12px;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.kep-kartya h3 {
-  margin-top: 0;
-  color: #2f6fbd;
-}
-
-.kep-kartya img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-}nav {
-      background: #1f4f8f;
-      text-align: center;
-      padding: 12px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    main {
-      max-width: 900px;
-      margin: auto;
-      padding: 25px;
-    }
-
-    section {
-      background: white;
-      margin-bottom: 20px;
-      padding: 22px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
-
-    h2 {
-      color: #2f6fbd;
-    }
-
-    .dobozok {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
-    }
-
-    .doboz {
-      background: #eaf2ff;
-      padding: 15px;
-      border-radius: 10px;
-    }
-
-    footer {
-      text-align: center;
-      background: #1f4f8f;
-      color: white;
-      padding: 18px;
-      margin-top: 30px;
-    }
-  </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header>
-    <h1>Budapest IX. Kerületi Molnár Ferenc Magyar-Angol Két Tanítási Nyelvű Általános Iskola</h1>
-    <p>Egy diák szemszögéből</p>
-  </header>
 
-  <nav>
-    <a href="#bemutatas">Bemutatás</a>
-    <a href="#szeretem">Miért szeretem?</a>
-    <a href="#kapcsolat">Kapcsolat</a>
-  </nav>
+    <header>
+        <h1>Budapest IX. Kerületi Molnár Ferenc Magyar-Angol Két Tanítási Nyelvű Általános Iskola</h1>
+        <p>1095 Budapest, Mester utca 19.</p>
+    </header>
 
-  <main>
-    <section id="bemutatas">
-      <h2>Az iskolánkról</h2>
-      <p>
-        A Molnár Ferenc Magyar-Angol Két Tanítási Nyelvű Általános Iskola
-        Budapest IX. kerületében, a Mester utcában található. Az intézmény általános iskolai
-        oktatást nyújt, és kiemelt szerepet kap benne az angol nyelv tanulása.
-      </p>
-      <p>
-        Az iskola magyar-angol két tanítási nyelvű, ezért a tanulók több tantárgyon keresztül is
-        találkozhatnak az angol nyelvvel. Ez segíti a nyelvtudás fejlődését és a magabiztosabb
-        kommunikációt.
-      </p>
+    <nav>
+        <a href="#rolunk">Rólunk</a>
+        <a href="#programok">Programok</a>
+        <a href="#miert">Miért minket?</a>
+        <a href="#galeria">Galéria</a>
+        <a href="#kapcsolat">Kapcsolat</a>
+    </nav>
+
+    <div class="hero">
+        <img src="kepek/iskola.jpg" alt="Az iskola épülete">
+    </div>
+
+    <section id="rolunk">
+        <h2>Rólunk</h2>
+
+        <p>
+            A Budapest IX. Kerületi Molnár Ferenc Magyar-Angol Két Tanítási Nyelvű
+            Általános Iskola Ferencváros egyik meghatározó oktatási intézménye.
+            Az iskola magas színvonalú oktatást, angol nyelvi képzést és számos
+            közösségi programot kínál tanulói számára.
+        </p>
+
+        <p>
+            Célunk, hogy tanulóink biztonságos, támogató környezetben fejlődjenek,
+            miközben korszerű tudást és nyelvi készségeket szereznek.
+        </p>
     </section>
 
-    <section id="szeretem">
-      <h2>Az iskola jellemzői</h2>
-      <div class="dobozok">
-        <div class="doboz">
-          <h3>Közösség</h3>
-          <p>Az iskola fontos része az osztályközösség és a közös iskolai élet.</p>
+    <section id="programok">
+
+        <h2>Programok</h2>
+
+        <div class="dobozok">
+
+            <div class="kartya">
+                <h3>📚 Oktatás</h3>
+                <p>Magas színvonalú oktatás és magyar-angol két tanítási nyelvű képzés.</p>
+            </div>
+
+            <div class="kartya">
+                <h3>⚽ Sport</h3>
+                <p>Sportfoglalkozások, versenyek és aktív iskolai élet.</p>
+            </div>
+
+            <div class="kartya">
+                <h3>🎉 Közösségi programok</h3>
+                <p>Kirándulások, ünnepségek és iskolai rendezvények.</p>
+            </div>
+
         </div>
-        <div class="doboz">
-          <h3>Angol nyelv</h3>
-          <p>A két tanítási nyelvű oktatás miatt az angol nyelv kiemelt szerepet kap.</p>
-        </div>
-        <div class="doboz">
-          <h3>Iskolai programok</h3>
-          <p>A tanév során különböző közösségi programok és versenyek is kapcsolódhatnak az oktatáshoz.</p>
-        </div>
-        <div class="doboz">
-          <h3>Testnevelés</h3>
-          <p>Az iskolai élet része a mozgás és a testnevelés is.Az iskolának saját uszodája van, amit a diákok használhatnak.</p>
-        </div>
-      </div>
+
     </section>
 
-    <section>
-      <h2>Diák szemszögéből</h2>
-      <p>
-        Diákként az iskola legfontosabb részei a tanórák, a közösség, az angol nyelv tanulása
-        és az iskolai programok. A Molnár Ferenc Általános Iskola olyan intézmény, ahol a tanulás
-        mellett a közösségi élet is szerepet kap.
-      </p>
-    </section><section>
-  <h2>Képek az iskoláról</h2>
+    <section id="miert">
 
-  <div class="kepek">
-    <div class="kep-kartya">
-      <h3>Iskola</h3>
-      <img src="iskola.jpeg" alt="iskola">
-    </div>
+        <h2>Miért válassza iskolánkat?</h2>
 
-    <div class="kep-kartya">
-      <h3>Uszoda</h3>
-      <img src="uszi.jpeg" alt="uszoda">
-    </div>
+        <div class="dobozok">
 
-    <div class="kep-kartya">
-      <h3>Folyosó</h3>
-      <img src="folyoso.jpeg" alt="folyoso">
-    </div>
+            <div class="kartya">
+                <h3>🌍 Két tanítási nyelv</h3>
+                <p>Tanulóink már fiatal korban magas szinten sajátíthatják el az angol nyelvet.</p>
+            </div>
 
-    <div class="kep-kartya">
-      <h3>Ebédlő</h3>
-      <img src="ebedlo.jpeg" alt="ebédlő">
-    </div>
-  </div>
-</section>
+            <div class="kartya">
+                <h3>👨‍🏫 Kiváló pedagógusok</h3>
+                <p>Tapasztalt és elhivatott tanáraink segítik a diákok fejlődését.</p>
+            </div>
+
+            <div class="kartya">
+                <h3>🎉 Színes iskolai élet</h3>
+                <p>Kirándulások, versenyek és közösségi programok várják a tanulókat.</p>
+            </div>
+
+            <div class="kartya">
+                <h3>⚽ Sportolási lehetőségek</h3>
+                <p>A rendszeres testmozgás és sport fontos része az iskolai életnek.</p>
+            </div>
+
+            <div class="kartya">
+                <h3>🤝 Barátságos közösség</h3>
+                <p>Iskolánk befogadó és támogató környezetet biztosít minden diák számára.</p>
+            </div>
+
+            <div class="kartya">
+                <h3>💡 Modern oktatás</h3>
+                <p>Korszerű módszerekkel és digitális eszközökkel támogatjuk a tanulást.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="galeria">
+
+        <h2>Képgaléria</h2>
+
+        <div class="galeria">
+            <img src="kepek/iskola.jpg" alt="Iskola">
+            <img src="kepek/folyoso.jpg" alt="Folyosó">
+            <img src="kepek/ebedlo.jpg" alt="Ebédlő">
+            <img src="kepek/uszi.jpg" alt="Uszoda">
+        </div>
+
+    </section>
 
     <section id="kapcsolat">
-      <h2>Alapadatok</h2>
-      <p><strong>Cím:</strong> 1095 Budapest, Mester utca 19.</p>
-      <p><strong>Iskola típusa:</strong> magyar-angol két tanítási nyelvű általános iskola</p>
-      <p><strong>Honlap:</strong> mofe.hu</p>
-    </section>
-  </main>
 
-  <footer>
-    <p>Készítette: Bjaoui Aziz</p>
-  </footer>
+        <h2>Kapcsolat</h2>
+
+        <p>📍 Cím: 1095 Budapest, Mester utca 19.</p>
+
+        <a class="gomb"
+           href="https://www.google.com/maps/search/?api=1&query=1095+Budapest+Mester+utca+19"
+           target="_blank">
+            Térkép megnyitása
+        </a>
+
+    </section>
+
+    <footer>
+        <p>Készítette: Bjaoui Aziz</p>
+    </footer>
+
 </body>
+
 </html>
+```
