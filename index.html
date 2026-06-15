@@ -7,103 +7,185 @@
   <title>Budapest IX. Kerületi Molnár Ferenc Magyar-Angol Két Tanítási Nyelvű Általános Iskola</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f4f8ff;
+      background: linear-gradient(180deg, #eef5ff, #ffffff);
       color: #222;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     header {
-      background: #2f6fbd;
+      background: linear-gradient(135deg, #1f4f8f, #2f6fbd, #6aa6ff);
       color: white;
       text-align: center;
-      padding: 40px 20px;
+      padding: 55px 20px;
     }
 
     header h1 {
-      margin-bottom: 10px;
+      max-width: 1000px;
+      margin: auto;
+      font-size: 32px;
+      line-height: 1.3;
+    }
+
+    header p {
+      font-size: 19px;
+      margin-top: 15px;
     }
 
     nav {
-      background: #1f4f8f;
+      background: #163b6d;
       text-align: center;
-      padding: 12px;
+      padding: 14px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 12px;
+      margin: 0 14px;
       font-weight: bold;
+      font-size: 15px;
     }
 
     nav a:hover {
+      color: #cfe3ff;
       text-decoration: underline;
     }
 
     main {
-      max-width: 950px;
+      max-width: 1050px;
       margin: auto;
-      padding: 25px;
+      padding: 30px 20px;
     }
 
     section {
       background: white;
-      margin-bottom: 20px;
-      padding: 22px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      margin-bottom: 25px;
+      padding: 28px;
+      border-radius: 16px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.09);
     }
 
     h2 {
-      color: #2f6fbd;
+      color: #1f4f8f;
+      border-left: 6px solid #2f6fbd;
+      padding-left: 12px;
+      margin-top: 0;
+    }
+
+    .kiemelt {
+      background: #eaf2ff;
+      border-left: 6px solid #2f6fbd;
+      padding: 18px;
+      border-radius: 12px;
+      margin-top: 18px;
+      font-weight: bold;
     }
 
     .dobozok {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+      margin-top: 18px;
     }
 
     .doboz {
-      background: #eaf2ff;
-      padding: 15px;
-      border-radius: 10px;
+      background: #f0f6ff;
+      padding: 18px;
+      border-radius: 14px;
+      border: 1px solid #d5e6ff;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .doboz:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    }
+
+    .doboz h3 {
+      color: #2f6fbd;
+      margin-top: 0;
+    }
+
+    .adatlista {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .adatlista div {
+      padding: 10px;
+      background: #f3f7ff;
+      border-radius: 8px;
+    }
+
+    .adatlista strong {
+      color: #1f4f8f;
     }
 
     .kepek {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+      margin-top: 20px;
     }
 
     .kep-kartya {
-      background: #eaf2ff;
-      padding: 12px;
-      border-radius: 10px;
+      background: #f0f6ff;
+      padding: 14px;
+      border-radius: 14px;
       text-align: center;
+      border: 1px solid #d5e6ff;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .kep-kartya:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
     }
 
     .kep-kartya h3 {
       margin-top: 0;
-      color: #2f6fbd;
+      color: #1f4f8f;
     }
 
     .kep-kartya img {
       width: 100%;
-      height: 180px;
+      height: 190px;
       object-fit: cover;
-      border-radius: 10px;
+      border-radius: 12px;
     }
 
     footer {
       text-align: center;
-      background: #1f4f8f;
+      background: #163b6d;
       color: white;
-      padding: 18px;
+      padding: 22px;
       margin-top: 30px;
+    }
+
+    @media (max-width: 650px) {
+      header h1 {
+        font-size: 24px;
+      }
+
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+
+      .adatlista {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -112,11 +194,12 @@
 
   <header>
     <h1>Budapest IX. Kerületi Molnár Ferenc Magyar-Angol Két Tanítási Nyelvű Általános Iskola</h1>
-    <p>Bemutatás egy diák szemszögéből</p>
+    <p>Iskolabemutató egy diák szemszögéből</p>
   </header>
 
   <nav>
     <a href="#bemutatas">Bemutatás</a>
+    <a href="#diakszemmel">Diákszemmel</a>
     <a href="#miertjo">Miért jó?</a>
     <a href="#kepek">Képek</a>
     <a href="#adatok">Alapadatok</a>
@@ -125,22 +208,44 @@
   <main>
 
     <section id="bemutatas">
-      <h2>Az iskolám bemutatása</h2>
+      <h2>Az iskola bemutatása</h2>
 
       <p>
         A Budapest IX. Kerületi Molnár Ferenc Magyar-Angol Két Tanítási Nyelvű
-        Általános Iskola a IX. kerületben, a Mester utcában található.
-        Diákként szerintem fontos, hogy egy iskola ne csak a tanulásról szóljon,
-        hanem arról is, hogy a gyerekek jól érezzék magukat, fejlődjenek, és
-        közösségben legyenek.
+        Általános Iskola Budapest IX. kerületében, a Mester utcában található.
+        Az intézmény általános iskolai oktatást biztosít, és nevéből is látszik,
+        hogy az angol nyelv kiemelt szerepet kap az iskola életében.
       </p>
 
       <p>
-        Az iskola egyik fontos jellemzője, hogy magyar-angol két tanítási nyelvű.
-        Ez azt jelenti, hogy az angol nyelv nagyobb szerepet kap, mint egy
-        átlagos általános iskolában. Ez diák szemmel azért jó, mert az angol
-        nyelvtudás később sok helyzetben hasznos lehet, például továbbtanulásnál,
-        utazásnál vagy munkánál.
+        Diákként úgy gondolom, hogy egy iskola feladata nemcsak az, hogy a tanulók
+        megtanulják a kötelező tananyagot. Legalább ilyen fontos az is, hogy az
+        iskola segítse a gyerekek fejlődését, önállóságát, közösségi életét és
+        jövőbeli lehetőségeit. Egy általános iskola meghatározó része egy diák
+        életének, hiszen itt alakulnak ki az alapvető tanulási szokások, barátságok
+        és élmények.
+      </p>
+
+      <div class="kiemelt">
+        Az iskola egyik legfontosabb sajátossága a magyar-angol két tanítási nyelvű oktatás.
+      </div>
+    </section>
+
+    <section id="diakszemmel">
+      <h2>Az iskola diák szemszögéből</h2>
+
+      <p>
+        Egy diák számára az iskola nemcsak egy épület, ahová minden reggel be kell
+        menni, hanem egy olyan hely, ahol a nap jelentős részét tölti. Ezért fontos,
+        hogy az iskola légköre támogató legyen, a tanárok segítsék a tanulást, és
+        a diákok biztonságban, közösségben érezzék magukat.
+      </p>
+
+      <p>
+        A Molnár Ferenc Általános Iskola bemutatásakor diák szemmel számomra az
+        angol nyelv tanulása, a közösség, a tanórákon kívüli programok és az
+        iskolai környezet a legfontosabbak. Ezek együtt határozzák meg, hogy milyen
+        élmény egy iskolába járni.
       </p>
     </section>
 
@@ -150,35 +255,38 @@
       <div class="dobozok">
 
         <div class="doboz">
-          <h3>Angol nyelv tanulása</h3>
+          <h3>Angol nyelvi lehetőség</h3>
           <p>
-            A két tanítási nyelvű oktatás miatt a diákok többet foglalkozhatnak
-            az angollal. Ez segíthet abban, hogy bátrabban használjuk a nyelvet.
+            A magyar-angol két tanítási nyelvű oktatás nagy előny lehet, mert az
+            angol nyelv ismerete ma már nagyon fontos. Segíthet a továbbtanulásban,
+            az utazásban és később a munkavállalásban is.
           </p>
         </div>
 
         <div class="doboz">
-          <h3>Közösség</h3>
+          <h3>Közösségi élet</h3>
           <p>
-            Egy iskolában nagyon fontos az osztályközösség. Diákként sokat számít,
-            hogy legyenek barátaink, és jó hangulatban teljenek az iskolai napok.
+            Egy jó osztályközösség sokat számít a mindennapokban. Diákként fontos,
+            hogy legyenek barátaink, tudjunk együtt dolgozni másokkal, és megtanuljuk
+            az együttműködést.
           </p>
         </div>
 
         <div class="doboz">
-          <h3>Programok</h3>
+          <h3>Fejlődés és önállóság</h3>
           <p>
-            Az iskolai programok, események és versenyek színesebbé tehetik a
-            tanévet. Ezeken a diákok nemcsak tanulhatnak, hanem élményeket is
-            szerezhetnek.
+            Az általános iskola fontos időszak, mert a tanulók itt készülnek fel a
+            felsőbb évfolyamokra és a továbbtanulásra. Egy iskola akkor jó, ha segít
+            abban, hogy a diákok egyre önállóbbak legyenek.
           </p>
         </div>
 
         <div class="doboz">
-          <h3>Elhelyezkedés</h3>
+          <h3>Iskolai programok</h3>
           <p>
-            Az iskola Budapest IX. kerületében található, ezért a környéken lakó
-            tanulók számára könnyen megközelíthető lehet.
+            A tanórák mellett a programok, versenyek és közös események is fontosak.
+            Ezek színesebbé teszik az iskolai életet, és olyan élményeket adhatnak,
+            amelyekre később is emlékezünk.
           </p>
         </div>
 
@@ -186,19 +294,19 @@
     </section>
 
     <section>
-      <h2>Diákként így látom</h2>
+      <h2>Összegzés</h2>
 
       <p>
-        Szerintem egy jó iskola attól jó, hogy egyszerre ad tudást és közösségi
-        élményeket. A Molnár Ferenc Általános Iskolában fontos szerepe van a
-        tanulásnak, különösen az angol nyelvnek, de emellett az is számít, hogy
-        a diákok együtt tudjanak fejlődni.
+        Összességében a Molnár Ferenc Magyar-Angol Két Tanítási Nyelvű Általános
+        Iskola olyan intézményként mutatható be, ahol a tanulás mellett fontos
+        szerepet kap az angol nyelv, a közösség és a diákok fejlődése is.
       </p>
 
       <p>
-        Diák szemszögből az a legjobb, ha az ember olyan iskolába járhat, ahol
-        hasznos dolgokat tanul, vannak barátai, és közben olyan élményeket szerez,
-        amelyekre később is emlékezni fog.
+        Diákként szerintem azért lehet jó ide járni, mert az iskola egyszerre ad
+        tudást és közösségi élményeket. Egy ilyen iskola nemcsak a jelenben fontos,
+        hanem a jövőre is felkészít, hiszen az itt megszerzett tudás és tapasztalat
+        később is hasznos lehet.
       </p>
     </section>
 
@@ -233,12 +341,25 @@
     <section id="adatok">
       <h2>Alapadatok</h2>
 
-      <p><strong>Teljes név:</strong> Budapest IX. Kerületi Molnár Ferenc Magyar-Angol Két Tanítási Nyelvű Általános Iskola</p>
-      <p><strong>Cím:</strong> 1095 Budapest, Mester u. 19.</p>
-      <p><strong>Telefon:</strong> +36 30 397 0230</p>
-      <p><strong>E-mail:</strong> mofe@mofe.hu</p>
-      <p><strong>OM azonosító:</strong> 034942</p>
-      <p><strong>Honlap:</strong> mofe.hu</p>
+      <div class="adatlista">
+        <div><strong>Teljes név</strong></div>
+        <div>Budapest IX. Kerületi Molnár Ferenc Magyar-Angol Két Tanítási Nyelvű Általános Iskola</div>
+
+        <div><strong>Cím</strong></div>
+        <div>1095 Budapest, Mester u. 19.</div>
+
+        <div><strong>Telefon</strong></div>
+        <div>+36 30 397 0230</div>
+
+        <div><strong>E-mail</strong></div>
+        <div>mofe@mofe.hu</div>
+
+        <div><strong>OM azonosító</strong></div>
+        <div>034942</div>
+
+        <div><strong>Honlap</strong></div>
+        <div>mofe.hu</div>
+      </div>
     </section>
 
   </main>
